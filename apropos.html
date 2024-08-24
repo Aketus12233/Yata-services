@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En-tête avec Menu Hamburger</title>
+<link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #005f73; /* Bleu */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px; /* Taille du logo */
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo span {
+            
+        }
+        .menu-hamburger {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20px;
+            width: 25px;
+        }
+        .menu-hamburger div {
+            height: 3px;
+            background-color: #9b5e2b; /* Marron */
+            border-radius: 3px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #005f73;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 0;
+        }
+        .menu a:hover {
+            background-color: #9b5e2b; /* Marron */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo"> <!-- Remplacez 'logo.png' par le chemin de votre image -->
+        
+
+        
+        <div class="phone">(+229) 67773117 / 66511417</div>
+        </li>
+ <!-- Numéro de téléphone -->
+    </div>
+    <div class="menu-hamburger" id="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="menu" id="menu">
+        <li><a href="index.html">Accueil</a></li>
+                <li><a href="hotellerie.html">Hôtellerie</a></li>
+                <li><a href="quincaillerie.html">Quincaillerie</a></li>
+                <li><a href="imprimerie.html">Imprimerie</a></li>
+                <li><a href="immobilier.html">Immobilier</a></li>
+                <li><a href="commerce.html">Commerce Général</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+    </nav>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+</script>
+<main>
+        <section>
+            <h2>Notre Histoire</h2>
+            <p>YATA est une entreprise diversifiée qui propose des services de qualité dans différents secteurs, allant de l'hôtellerie à l'immobilier, en passant par la quincaillerie et l'imprimerie. Notre mission est de fournir des solutions complètes et satisfaisantes à nos clients.</p>
+            <img src="about-us.jpg" alt="À Propos de YATA">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 YATA. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
